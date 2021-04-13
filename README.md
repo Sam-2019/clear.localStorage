@@ -6,8 +6,8 @@ Couldn't find a way to clear my localSotrage, that's where the tracker is stored
 Knowing hpw eaasy it is to clear localStorage on a desktop, i though why not build a simple web app to help resolve that issue.
 Hence, this little application.
 
-click Show Content, to get the list of keys in your localStorage.
-click Clear Content, to clear all stored keys in your localStorage.
+ - click Show Content, to get the list of keys in your localStorage.
+ - click Clear Content, to clear all stored keys in your localStorage.
 
 [Go to Demo](https://localstorageclear.netlify.app)
 
