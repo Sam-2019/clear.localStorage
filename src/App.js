@@ -34,13 +34,15 @@ export default function App() {
 
   return (
     <div className="App">
-      <button onClick={clear} className="my-button" disabled={loading}>
-        {loading ? "Loading.." : "Clear storage"}
-      </button>
+      <div className="button-container">
+        <button onClick={show} className="my-button show" disabled={loading}>
+          {loading ? "Loading.." : "Show content"}
+        </button>
 
-      <button onClick={show} className="my-button" disabled={loading}>
-        {loading ? "Loading.." : "Show content"}
-      </button>
+        <button onClick={clear} className="my-button clear" disabled={loading}>
+          {loading ? "Loading.." : "Clear storage"}
+        </button>
+      </div>
 
       {data.map((items, index) => (
         <ListItem key={index} value={items} />
