@@ -46,7 +46,7 @@ export default function App() {
         <ListItem key={index} value={items} />
       ))}
 
-      <div>{dataLength}</div>
+      <div className="storage-length">{dataLength}</div>
     </div>
   );
 }
