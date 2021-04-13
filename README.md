@@ -11,36 +11,9 @@ Hence, this little application.
 
 [Go to Demo](https://localstorageclear.netlify.app)
 
-### Built With
-
-This project uses the following technologies
-
-- [Create React App](https://github.com/facebook/create-react-app) for bootstrapping client
-- [React.js](https://reactjs.org) for client
-
-<!-- GETTING STARTED -->
-
 ## Getting Started
 
 Please follow the instructions below to set up this project locally.
-
-<!--To get a local copy up and running, please follow these simple example steps.-->
-
-<!-- LICENSE -->
-<!--
-### Clone Repo
-
-Clone Git repo:
-
-```
-git clone hhttps://github.com/Sam-2019/clear.localStorage.git
-```
-
-Via GitHub CLI
-
-```
-gh repo clone Sam-2019/clear.localStorage
-``` -->
 
 ### Installation
 
