@@ -4,12 +4,21 @@ import "./styles.css";
 export default function App() {
   const [data, setData] = React.useState([]);
   const [dataLength, setDataLength] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
 
-  function clear() {
-    const clearStorage = window.localStorage.clear();
+  async function clear() {
+    setLoading(true);
 
-    if (clearStorage === undefined) {
-      console.log("storage cleared");
+    try {
+      const clearStorage = await window.localStorage.clear();
+
+      if (clearStorage === undefined) {
+        setData([]);
+        setDataLength("No data");
+      }
+      setLoading(false);
+    } catch {
+      setLoading(false);
     }
   }
 
@@ -23,35 +32,25 @@ export default function App() {
     setDataLength(propertyNames.length);
   }
 
-  function save() {
-    localStorage.setItem("myCat", "Tom");
-    const getStorage = window.localStorage;
-    console.log(getStorage);
-  }
-
-  function ListItem(props) {
-    return <div className="storage-item">{props.value}</div>;
-  }
-
   return (
     <div className="App">
-      <button onClick={clear} className="my-button">
-        clear localStorage
+      <button onClick={clear} className="my-button" disabled={loading}>
+        {loading ? "Loading.." : "Clear localStorage"}
       </button>
 
-      <button onClick={save} className="my-button">
-        save
-      </button>
-
-      <button onClick={show} className="my-button">
-        show
+      <button onClick={show} className="my-button" disabled={loading}>
+        {loading ? "Loading.." : "Show"}
       </button>
 
       {data.map((items, index) => (
         <ListItem key={index} value={items} />
       ))}
 
-      {/* <div>{KeyName.length}</div> */}
+      <div>{dataLength}</div>
     </div>
   );
+}
+
+function ListItem({ value }) {
+  return <div className="storage-item">{value}</div>;
 }
