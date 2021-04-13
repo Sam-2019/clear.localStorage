@@ -35,11 +35,11 @@ export default function App() {
   return (
     <div className="App">
       <button onClick={clear} className="my-button" disabled={loading}>
-        {loading ? "Loading.." : "Clear localStorage"}
+        {loading ? "Loading.." : "Clear storage"}
       </button>
 
       <button onClick={show} className="my-button" disabled={loading}>
-        {loading ? "Loading.." : "Show"}
+        {loading ? "Loading.." : "Show content"}
       </button>
 
       {data.map((items, index) => (
