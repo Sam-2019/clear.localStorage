@@ -1,0 +1,23 @@
+.App {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 30%;
+}
+
+.my-button {
+  padding: 1% 5%;
+  margin: 8px 0;
+  text-align: center;
+}
+
+.storage-item {
+  margin: 0 0 10px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    width: 100%;
+  }
+}
