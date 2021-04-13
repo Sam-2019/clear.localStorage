@@ -14,7 +14,7 @@ export default function App() {
 
       if (clearStorage === undefined) {
         setData([]);
-        setDataLength("No data");
+        setDataLength("Data cleared");
       }
       setLoading(false);
     } catch {
@@ -30,6 +30,10 @@ export default function App() {
 
     setData(propertyNames);
     setDataLength(propertyNames.length);
+
+    if (propertyNames.length === 0) {
+      setDataLength("No data");
+    }
   }
 
   return (
