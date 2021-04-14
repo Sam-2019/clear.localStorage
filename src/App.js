@@ -20,6 +20,12 @@ export default function App() {
     } catch {
       setLoading(false);
     }
+
+    const timer = setTimeout(() => {
+      setDataLength("");
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }
 
   function show() {
@@ -34,6 +40,12 @@ export default function App() {
     if (propertyNames.length === 0) {
       setDataLength("No data");
     }
+
+    const timer = setTimeout(() => {
+      setDataLength("");
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }
 
   return (
