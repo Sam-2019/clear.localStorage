@@ -1,6 +1,7 @@
 # Clear localStorage
 
-Got tired of viewed products on Jumia.com following me on the web. A way to deal with this is to clear your localStorage.
+Got tired of viewed products on Jumia.com following me on the web.
+Findings from research on how to deal this point to clearing your browser's localStorage.
 Clearing localStorage on chrome desktop is super easy and fast, mobile on the other hand, is quite a challenge.
 Googled solutions to help with this problem, got some responses, but nothing actually works.
 Knowing how eaasy it is to clear localStorage on a desktop, I thought why not build a simple web app to help resolve this.
